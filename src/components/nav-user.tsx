@@ -4,9 +4,7 @@ import {
     BadgeCheck,
     Bell,
     ChevronsUpDown,
-    CreditCard,
     LogOut,
-    Sparkles,
 } from "lucide-react"
 
 import {
@@ -39,12 +37,11 @@ export function NavUser({
 }) {
     const {isMobile} = useSidebar()
     const {logout} = useAuth({});
-
     return (
         <SidebarMenu>
             <SidebarMenuItem>
                 <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
+                    <DropdownMenuTrigger asChild  className={'cursor-pointer'}>
                         <SidebarMenuButton
                             size="lg"
                             className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
@@ -80,28 +77,17 @@ export function NavUser({
                         </DropdownMenuLabel>
                         <DropdownMenuSeparator/>
                         <DropdownMenuGroup>
-                            <DropdownMenuItem>
-                                <Sparkles/>
-                                Upgrade to Pro
-                            </DropdownMenuItem>
-                        </DropdownMenuGroup>
-                        <DropdownMenuSeparator/>
-                        <DropdownMenuGroup>
-                            <DropdownMenuItem>
+                            <DropdownMenuItem className={'cursor-pointer'}>
                                 <BadgeCheck/>
                                 Account
                             </DropdownMenuItem>
-                            <DropdownMenuItem>
-                                <CreditCard/>
-                                Billing
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
+                            <DropdownMenuItem className={'cursor-pointer'}>
                                 <Bell/>
                                 Notifications
                             </DropdownMenuItem>
                         </DropdownMenuGroup>
                         <DropdownMenuSeparator/>
-                        <DropdownMenuItem onClick={logout}>
+                        <DropdownMenuItem onClick={logout} className={'cursor-pointer'}>
                             <LogOut/>
                             Log out
                         </DropdownMenuItem>

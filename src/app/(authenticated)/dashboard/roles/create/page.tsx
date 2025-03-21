@@ -1,9 +1,11 @@
 import Header from "@/components/header";
 
 const breadcrumbs = [
-    {name: 'Dashboard', href: '#'}
-]
-export default function DashboardPage() {
+    {name: 'Dashboard', href: '/dashboard'},
+    {name: 'Roles', href: '/dashboard/roles/list'},
+    {name: 'Create New', href: '#'}
+];
+export default function CreateNewRolePage() {
     return (
         <>
             <Header breadcrumbs={breadcrumbs}/>
